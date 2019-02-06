@@ -1,13 +1,15 @@
 # zipfs-law
 Hypothesis testing of Zipf's Law for natural and unnatural languages (NLP SP19)
 
+
+
 **Contents**
 
 _____
 
 * Introduction
 * Part One: Zipf's Law for Natural Language
-* Part Two: Zipf's Law for Unnatural Language
+* Part Two: Zipf's Law for Simulated Language
 * Analysis and Results
 * Replicating the Study
 * References and Further Investigation
@@ -57,7 +59,7 @@ the x-axis, as discussed previously).
 
 ![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig2.png "Figure 1: Zipf's Law for Natural Language Samples")
 
-### Part Two: Zipf's Law for Unnatural (simulated) Language
+### Part Two: Zipf's Law for Simulated Language
 
 From the above results, it's clear Zipf's Law holds true for natural language
 (at least, for English, though other studies have been conducted proving this Law
@@ -77,7 +79,7 @@ linear relationship between the logs of frequency and rank, skewed even more hea
 on either end of the x-axis. For discussion related to why this might be the case,
 see the **Analysis and Results** section, below.
 
-![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 2: Zipf's Law for Non-Natural Language Samples")
+![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 2: Zipf's Law for Simulated Language Samples")
 
 ### Analysis and Results
 
@@ -106,8 +108,10 @@ One final remark: an individual generates speech or text based on _real-world ex
 natural events, from the works of other authors or based on famous speeches from the past. Therefore,
 all natural language is seemingly dependent on that which came before it, which may help to explain
 why this trend can seen in ancient religious texts as well as modern-day speeches.
-
-
+Part two of this study demonstrated how simulated language, unlike natural language, _does not_
+conform to Zipf's Law - and a possible explanation, albeit oversimplified, might mention how
+this pseudo-random language generated from strings of English characters wasn't based on any
+facts about the real world, nor on works of previous writers, as is natural language.
 
 ##### What's happening at either end of the x-axis in both plots?
 

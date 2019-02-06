@@ -1,7 +1,8 @@
 # zipfs-law
 Hypothesis testing of Zipf's Law for natural and unnatural languages (NLP SP19)
 
-__**Introduction**__
+_**Introduction**_
+
 This project will test Zipf's Law on large samples of natural language as well
 as samples of randomly-generated text, used to simulate non-natural language.
 

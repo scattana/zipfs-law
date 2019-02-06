@@ -1,7 +1,14 @@
 # zipfs-law
 Hypothesis testing of Zipf's Law for natural and unnatural languages (NLP SP19)
 
-Contents
+**Contents**
+
+_____
+
+* Introduction
+* Zipf's Law for Natural Language
+* Zipf's Law for Unnatural Language
+* Analysis and Results
 
 _____
 
@@ -45,6 +52,8 @@ From **figure 1** (below), it is clear all five English texts confirm Zipf's Law
 (with only slight deviations from the linear relationship on the extreme ends of
 the x-axis, as discussed previously).
 
+Figure 1:
+![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 1: Zipf's Law for Natural Language Samples")
 
 
 

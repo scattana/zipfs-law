@@ -15,12 +15,12 @@ import random
 import string
 
 # Create a frequency distribution of the given text and plot in order to visualize Zipf's Law
-def zipf(text, name, new_figure=False):
+def zipf(text, name, new_figure=False, log=True):
     fdis = dict(FreqDist(text))
     freq = [item[1] for item in sorted(fdis.items(), key=lambda kv: kv[1], reverse=True)]
     rank = [item+1 for item in range(len(sorted(fdis.items(), key=lambda kv: kv[1], reverse=True)))]
     
-    # Test print the first ten items and their frequencies from the given text
+    # Test print the first ten ranks and their frequencies from the given text
     #print('\n'.join([str(rank[i])+': '+str(freq[i]) for i in range(10)]))
     
     # plot freq vs rank using pylab
@@ -31,8 +31,9 @@ def zipf(text, name, new_figure=False):
     
     # change plot to log scale to visually confirm Zipf's Law
     # see discussion in README.md
-    pylab.xscale("log")
-    pylab.yscale("log")
+    if log:
+        pylab.xscale("log")
+        pylab.yscale("log")
     
     # add axis labels, title, and legend
     pylab.xlabel('Rank')
@@ -40,7 +41,7 @@ def zipf(text, name, new_figure=False):
     pylab.title('Logorithmic Frequency vs Rank for Words in a Text')
     pylab.legend(loc='upper right')
     
-def generate_text(subset=8, text_len=1000000, approx_word_len=5):
+def generate_text(subset=8, text_len=1000000, approx_word_len=5, log=True):
     if subset>26:
         subset=26     # max chars in alphabet
     if subset<1:
@@ -54,7 +55,7 @@ def generate_text(subset=8, text_len=1000000, approx_word_len=5):
     chars = list(string.ascii_lowercase)[:subset]
     for i in range(int(subset/approx_word_len)):
         chars.append(' ')               # add the number of spaces required to maintain an approx. word length (specified)
-    zipf(''.join(random.choice(chars) for _ in range(text_len)).split(' '),'Randomly-Generated String, avg word len='+str(approx_word_len), new_figure='True')
+    zipf(''.join(random.choice(chars) for _ in range(text_len)).split(' '),'Randomly-Generated String, avg word len='+str(approx_word_len), new_figure='True', log=log)
     
 
 def main():

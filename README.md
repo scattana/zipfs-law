@@ -40,15 +40,16 @@ through a custom function, _zipf_, which calculates frequency distribution
 (bag-of-words model) and plots word frequency (y-axis) versus word rank (x-axis).
 
 To visualize the inverse relationship, logorithmic scaling was used; however,
-the _zipf_ function permits the disabiling of log scaling through an option parameter
-(log=False). Note: disabling the _log_ parameter will make the graphs very
+the _zipf_ function permits the disabiling of log scaling through an optional parameter, `log=False`.
+
+Note: disabling the _log_ parameter will make the graphs very
 difficult to analyze, because every text has a disproportionate number of words
 whose count is one (i.e. they only appear once in the text). These are often obscure
 words or references to specific people or places, and as such, they act as outliers
-in the non-logorithmic graph. By using log scaling, the inverse relationship
-**is evident through a linear relationship between the scaled y and x axes**
-The presence of a linear relationship confirms Zipf's Law, while its absense 
-would disprove the Law.
+in the non-logorithmic graph. 
+
+By using log scaling, the inverse relationship **is evident through a linear relationship between the scaled y and x axes**
+The presence of a linear relationship confirms Zipf's Law, while its absense would disprove the Law.
 
 From **Figure 1** (below), it is clear all five English texts confirm Zipf's Law
 (with only slight deviations from the linear relationship on the extreme ends of
@@ -80,7 +81,47 @@ see the **Analysis and Results** section, below.
 
 ### Analysis and Results
 
+The previous two studies seemingly confirm Zipf's Law and suggest there is indeed
+an inverse relationship between word frequency and rank in natural language, and further,
+that this is a _unique_ feature of natural language - it can't be easily simulated by
+random or pseudo-random text. It would appear there is something unique about natural
+languages that enables this result. So, what it is?
 
+Though there may be many underlying factors at play, one such factor is likely the
+grammatical structure present in any natural language (although this study was only conducted
+on English texts, other studies have proven similar results with many other languages). There
+are certain grammatical rules an author or speaker must follow to convey an appropriate message.
+Verbs will generally reference a subject, characters in a story must be explicitly mentioned
+by name a certain number of times to avoid ambuguity, and pronouns are used to avoid repetitiveness
+and prevent wordiness. 
+
+Further, Zipf's Law seems to hold true _for a given text_ - and the domain of a specific text,
+whether it is a work of fiction, a religious text, or a speech transcript, will almost certainly
+use the same terms more often than a random collection of words and phrases (part two of this study
+simulated this effect at a very basic level). While part one of this study used a very diverse set
+of domains to test Zipf's Law, ranging from fiction to religion and presidential speeches, Zipf's
+Law was confirmed on each of these texts independently.
+
+One final remark: an individual generates speech or text based on _real-world experiences_, from
+natural events, from the works of other authors or based on famous speeches from the past. Therefore,
+all natural language is seemingly dependent on that which came before it, which may help to explain
+why this trend can seen in ancient religious texts as well as modern-day speeches.
+
+
+
+##### What's happening at either end of the x-axis in both plots?
+
+For a given text, there may be many words that are only used once. These might be
+specific references, names, places, or variations of the same word that only appear
+once in the text. These 'solo' words skew the results a bit, because there is no single
+'lowest rank' - instead, there can be thousands of words tied for the lowest rank
+(where all of these words only appear once!). On the other side, extremely common
+words (including stop words like 'a' or 'the') appear a disproportionate number of times
+and don't really reflect any information about the author's writing style or natural
+language in general - they exist for grammatical purposes. Very little text pre-processing
+was conducted on these samples, but implementing stopword filtering, lemmatization,
+and similar text pre-processing techniques would likely lessen the extreme behavior of
+these results on either end of the x-axis.
 
 
 ### Replication this Study
@@ -113,6 +154,18 @@ at the University of Notre Dame.
 Research conducted on Zipf's Law primarily relied on content from Britannica
 [found here](https://www.britannica.com/topic/Zipfs-law) and [related information
 about harmonic series from Wolfram](http://mathworld.wolfram.com/ZipfsLaw.html)
+
+The discussion of why Zipf's Law holds true references [this article from PLOS](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005110),
+which goes into much greater depth on this topic - and particularly, on the underlying psychlogical factors - than this short study
+can hope to provide.
+
+An expansion of this project could use a lemmatization tool (or similar) to conduct
+text pre-processing before testing Zipf's Law. This might, theoretically, reduce
+the extreme behavior of the graphs on either end of the x-axis, since there would be
+fewer variations of words being treated as distinct words.
+
+Thanks for checking out my work! Please feel free to [email me](scattana@nd.edu) with any questions
+or comments.
 
 
 

@@ -14,7 +14,7 @@ _____
 
 
 
-###Introduction
+### Introduction
 
 This project will test Zipf's Law on large samples of natural language as well
 as samples of randomly-generated text, used to simulate non-natural language.
@@ -54,7 +54,7 @@ the x-axis, as discussed previously).
 
 ![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 1: Zipf's Law for Natural Language Samples")
 
-###Part Two: Zipf's Law for Unnatural (simulated) Language
+### Part Two: Zipf's Law for Unnatural (simulated) Language
 
 From the above results, it's clear Zipf's Law holds true for natural language
 (at least, for English, though other studies have been conducted proving this Law
@@ -68,15 +68,15 @@ and the Python `random.choice()` function is employed to generate a psuedo-rando
 text. This text is passed to the _zipf_ function in much the same way, and again
 plotted in terms of frequency versus rank (again with default logorithmic scaling).
 
-From *Figure 2* (below), Zipf's Law _does not_ appear to hold for even a large
+From **Figure 2** (below), Zipf's Law _does not_ appear to hold for even a large
 (one million character/approx. 200,000 word) text sample. There is only a very rough
 linear relationship between the logs of frequency and rank, skewed even more heavily
 on either end of the x-axis. For discussion related to why this might be the case,
-see the *Analysus and Results* section, below.
+see the **Analysis and Results** section, below.
 
 ![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 2: Zipf's Law for Non-Natural Language Samples")
 
-###Analysis and Results
+### Analysis and Results
 
 
 

@@ -9,6 +9,8 @@ _____
 * Part One: Zipf's Law for Natural Language
 * Part Two: Zipf's Law for Unnatural Language
 * Analysis and Results
+* Replicating the Study
+* References and Further Investigation
 
 _____
 
@@ -31,7 +33,7 @@ of proportionality (which should the same within the same text).
 
 
 
-###Part One: Zipf's Law for Natural Language (English)
+### Part One: Zipf's Law for Natural Language (English)
 
 Five large text samples (ranging from 45,000 to 260,000 words) were analyzed
 through a custom function, _zipf_, which calculates frequency distribution
@@ -52,7 +54,7 @@ From **Figure 1** (below), it is clear all five English texts confirm Zipf's Law
 (with only slight deviations from the linear relationship on the extreme ends of
 the x-axis, as discussed previously).
 
-![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 1: Zipf's Law for Natural Language Samples")
+![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig2.png "Figure 1: Zipf's Law for Natural Language Samples")
 
 ### Part Two: Zipf's Law for Unnatural (simulated) Language
 
@@ -80,6 +82,37 @@ see the **Analysis and Results** section, below.
 
 
 
+
+### Replication this Study
+
+The full source code for this project is provided in _zipf.py_ and can be run
+using Python 3. Other requirements and dependencies include:
+* nltk open-source packages, including the `probability` and `book` modules
+* matplotlib (used for PyLab plotting)
+
+The Spyder IDE with a custom NLP environment was used for this project, though
+PyCharm and Atom are also recommended. All necessary dependencies can be installed
+through `conda`, i.e. `conda install nltk`
+
+The study uses the first five English-language texts from the `nltk.book` package,
+though different texts can be used by changing the first parameter to `zipf` (called
+in `main`).
+
+The optional `new_figure` and `log` parameters in the call to `zipf` create a new figure
+for plotting and plot with or without logorithmic scaling, respectively.
+
+
+### References and Further Investigation
+
+The inspiration for this study came from the Natural Language Toolkit (NLTK) and 
+chapter two of [the corresponding text](https://www.nltk.org/book)
+
+Topics related to this study were inspired by CSE-44657 Natural Language Processing
+at the University of Notre Dame.
+
+Research conducted on Zipf's Law primarily relied on content from Britannica
+[found here](https://www.britannica.com/topic/Zipfs-law) and [related information
+about harmonic series from Wolfram](http://mathworld.wolfram.com/ZipfsLaw.html)
 
 
 

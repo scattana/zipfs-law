@@ -168,7 +168,7 @@ text pre-processing before testing Zipf's Law. This might, theoretically, reduce
 the extreme behavior of the graphs on either end of the x-axis, since there would be
 fewer variations of words being treated as distinct words.
 
-Thanks for checking out my work! Please feel free to [email me](scattana@nd.edu) with any questions
+Thanks for checking out my work! Please feel free to email me at **scattana@nd.edu** with any questions
 or comments.
 
 

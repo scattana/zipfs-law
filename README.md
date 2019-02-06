@@ -57,7 +57,7 @@ From **Figure 1** (below), it is clear all five English texts confirm Zipf's Law
 (with only slight deviations from the linear relationship on the extreme ends of
 the x-axis, as discussed previously).
 
-![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig2.png "Figure 1: Zipf's Law for Natural Language Samples")
+![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 1: Zipf's Law for Natural Language Samples")
 
 ### Part Two: Zipf's Law for Simulated Language
 
@@ -79,7 +79,7 @@ linear relationship between the logs of frequency and rank, skewed even more hea
 on either end of the x-axis. For discussion related to why this might be the case,
 see the **Analysis and Results** section, below.
 
-![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig1.png "Figure 2: Zipf's Law for Simulated Language Samples")
+![alt-text](https://github.com/scattana/zipfs-law/blob/master/fig2.png "Figure 2: Zipf's Law for Simulated Language Samples")
 
 ### Analysis and Results
 

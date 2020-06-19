@@ -1,5 +1,5 @@
 # zipfs-law
-Hypothesis testing of Zipf's Law for natural and unnatural languages (NLP SP19)
+Hypothesis testing of Zipf's Law for natural and unnatural languages
 
 
 

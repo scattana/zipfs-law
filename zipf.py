@@ -14,14 +14,14 @@ from nltk.probability import FreqDist
 import random
 import string
 
-# Create a frequency distribution of the given text and plot in order to visualize Zipf's Law
+# ----------------------------------------------------------------------------
+# Create a frequency distribution of the given text and plot in order 
+# to visualize Zipf's Law
+# ----------------------------------------------------------------------------
 def zipf(text, name, new_figure=False, log=True):
     fdis = dict(FreqDist(text))
     freq = [item[1] for item in sorted(fdis.items(), key=lambda kv: kv[1], reverse=True)]
     rank = [item+1 for item in range(len(sorted(fdis.items(), key=lambda kv: kv[1], reverse=True)))]
-    
-    # Test print the first ten ranks and their frequencies from the given text
-    #print('\n'.join([str(rank[i])+': '+str(freq[i]) for i in range(10)]))
     
     # plot freq vs rank using pylab
     # (plotting will occur on the same plot unless 'new_figure' parameter is 'True')
@@ -40,14 +40,17 @@ def zipf(text, name, new_figure=False, log=True):
     pylab.ylabel('Frequency')
     pylab.title('Logorithmic Frequency vs Rank for Words in a Text')
     pylab.legend(loc='upper right')
+  
     
+# -----------------------------------------------------------------------------
+# Function to generate random text 
+# -----------------------------------------------------------------------------
 def generate_text(subset=8, text_len=1000000, approx_word_len=5, log=True):
     if subset>26:
         subset=26     # max chars in alphabet
     if subset<1:
         subset=8     # default chars (a-h, plus the space character) to use in random string generation
-    
-    
+      
     if approx_word_len>subset:
         approx_word_len=subset
 
@@ -57,7 +60,9 @@ def generate_text(subset=8, text_len=1000000, approx_word_len=5, log=True):
         chars.append(' ')               # add the number of spaces required to maintain an approx. word length (specified)
     zipf(''.join(random.choice(chars) for _ in range(text_len)).split(' '),'Randomly-Generated String, avg word len='+str(approx_word_len), new_figure='True', log=log)
     
-
+# -----------------------------------------------------------------------------
+# Main Execution
+# -----------------------------------------------------------------------------
 def main():
     # call zipf for natural language sample(s)
     zipf(text1, "Moby Dick")         
@@ -69,6 +74,5 @@ def main():
     generate_text(approx_word_len=6)
     
 if __name__ == "__main__":
-    # conditionally call main
     main()
 

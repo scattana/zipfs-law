@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb  6 16:07:56 2019
+Last Updated: Sun Jun 21 2020
 
-@author: scatt
+@author: seth_cattanach
 """
 
 # Hypothesis testing of Zipf's Law on natural and non-natural (i.e. randomly generated) language
